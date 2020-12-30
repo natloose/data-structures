@@ -1,0 +1,47 @@
+A hash function is any function that can be used to map data of arbitrary size to fixed-size values.
+It is a common practice in computer science and is used for several different purposes.
+
+Examples include:
+
+1. Message Digest
+2. Password Verification
+3. Data Structures
+4. Compiler Operation
+5. Linking file name and path together
+
+Difference between Hashing and Encryption
+
+Encryption - is a two-way function; what is encrypted can be decrypted with the proper key.
+Hashing - however, is a one-way function that scrambles plain text to produce a unique message digest.
+With a properly designed algorithm, there is no way to reverse the hashing process to reveal
+the original password.
+
+Hashing is used to index and retrieve items in a database because it is faster to find the item using the shorter
+hashed key than to find it using the original value.
+
+Hashing Algorithm
+
+Plain Text > Hash Function > Hashed Text
+
+One main use of hashing is to compare files for equality. Without opening two document files to compare
+them word-for-word, the calculated hash values of these files will allow the owner to know
+imediately if they are different.
+
+
+Hash Table(HashMap) or Dictionary
+
+These store data in the form of key-value pairs, where the key(hashcode) is generated from a hash
+function and the resulting hash code is used as the index at which the value is stored in the
+data structure. That makes accessing the data faster as the index value behaves as a key for the data value.
+In Python, the Dictionary data type respresents the implementatin of hash tables.
+
+Technology example that's adopted Hashing techniques.
+
+1. BlockChain
+
+A blockchain is a digital concept to store data. This data comes in blocks, so imamgine
+blocks of digital data. These blocks are chained together, and this makes their data immutable.
+Every block in the chain gets a unique digital signature that corresponds to exactly the
+string of data in that block. If anything inside a block changes, even just a single digit change,
+the block will get a new signature. This happens through a cryptographic hash function.
+Block chainuses SHA-256 hash algorithm and is a one-way cryptographic function.
