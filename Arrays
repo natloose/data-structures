@@ -1,0 +1,28 @@
+An Array is one of the fundamental blocks in data structures.
+Since a string is just formed by an array of characters, they are both similiar.
+
+Difference between an array and dynamic array:
+
+Array - An array is a basic data structure to store a collection of elements sequentially.
+An array can have one or more dimensions.
+
+Dynamic Array - is an array with a big improvement: automatic resizing.  One limitation of arrays is that they're
+fixed size, meaning you will need to specify the number of elements your array will hold ahead of time.
+One of the built in data structures in Python is a List which is a type of dynamic array, static arrays/arrays are
+not really used in Python or built-in, you'd have to import them from the array module.
+
+
+Strengths:
+Fast lookups - Just like arrays, retrieving the element at a given index takes O(1) time.
+Variable size - You can add as many items as you want, and the dynamic array will expand to hold them.
+Cache-friendly - Just like arrays, dynamic arrays place items right next to each other in memory,
+                 making efficient use of caches.
+
+Weaknesses:
+
+Slow worst-case appends - Usually, adding a new element at the end of the dynamic array takes O(1)
+                          time. But if the dynamic array doesn't have room for the newitem, it'll need to expand, which
+                          takes O(n) time.
+Costly inserts and deletes - Just like arrays, elements are stored adjacent to each other. So adding or removing
+                             and elemnt in the middle of an array requires scotting over other elements,
+                             which takes O(n) time.
