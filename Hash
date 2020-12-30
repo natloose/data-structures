@@ -16,6 +16,40 @@ Hashing - however, is a one-way function that scrambles plain text to produce a 
 With a properly designed algorithm, there is no way to reverse the hashing process to reveal
 the original password.
 
+1. Message Digest
+
+Let's suppose you have files that need to be stored on a available cloud provider. It's paramount that
+no third party is messing with the files you store. You do so by uwing a cryptographic hash algorithym by calculating
+the hash of the text. SHA-256 is one of the predominant cryptanalysis hash contrivances. The full area
+of the has thus calculated is 32 bytes. So the computation of hasing huge amounts of files won't be an issue.
+This hash is then saved on your local instrument.
+
+Now, when you later return and retrieve said files, you need to check there is no foul play or tampering.
+This can be done by once again hashing the file and comparing the one you had previously to the current.
+The hash will certainly change is anyone has manipulated the file.
+
+FUN FACT: SHA-2 was developed by the NSA
+
+2. Password Verification
+
+In password authentication, cryptographic hash functions are widely used.
+Let's suppose you type your email and password to validate "your" account.
+In the background a hash of the password you're entering is being calculated, it is then forwarded
+to the server for password authentication. The passwords saved on the server are simply the original
+passwords calculated hash values. This is to guarantee that no sniffing is present when the password
+is transmitted from cloud to server.
+
+3. Data Structures
+
+Various programming languages provide Data Structures found on the hash table
+
+
+
+
+
+
+
+
 Hashing is used to index and retrieve items in a database because it is faster to find the item using the shorter
 hashed key than to find it using the original value.
 
