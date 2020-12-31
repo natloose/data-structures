@@ -1,7 +1,7 @@
 Trees
 
 A computational tree is just like a real-world with the one difference being is that it is
-visualized upside down, with the root on the top and leaves at the bottom.
+visualized upside down, with the root (value) at the top and subtrees underneath
 
 Binary Tree
 
@@ -11,7 +11,7 @@ Types of Binary Trees:
 Full - A Binary tree is considered full if every node has 0 or 2 children.
        We can also say a binary tree is full in which all nodes except leaf
        nodes have two children. THEY CANNOT HAVE 1 CHILD.
-Complete (aka Binary Heap) - A Binary tree is considered Complete if all the levels are completely filled except
+Complete - A Binary tree is considered Complete if all the levels are completely filled except
                              possibly the last level and they get filled from left to right.
 Perfect - A Binary tree is considered perfect when all the leaves are on the same level and
           all of the nodes that decide to have decendants have 2 children.
@@ -19,10 +19,11 @@ Perfect - A Binary tree is considered perfect when all the leaves are on the sam
 
 Three ways to traverse a (Binary) Tree.
 The prefix tells us in what order we visit the node.
+st = subtree
 
-In-order Traversal : Order : Left, Node, Right
-Pre-order Traversal : Order: Node, Left, Right
-Post-order Traversal : Order: Left, Right, Node
+In-order Traversal : Order : Left st, Node, Right st
+Pre-order Traversal : Order: Node, Left st, Right st
+Post-order Traversal : Order: Left st, Right st, Node
 
 These three methods provide different outputs when traversing a Tree.
 
@@ -38,7 +39,23 @@ Pre-order Traversal output if printing each node:
 In-order Traversal output if printing each node:
 0 4 5 10 9 1 5 9 7 0 6
 
-Side Note: a binary search tree looks like this but the root nodes value on the left will be smaller
-and on the right will be bigger. e-g root node = 10, left nodes < 10, right nodes > 10
+Side Note: a binary search tree looks like this but left subtree values are <= root node and on the right
+will be >= the root node
 
+Binary Heap
+
+A binary heap is a heap data structure that takes the form of a binary tree.
+Binary heaps are a common way to implementing priority queues.
+
+A binary heap is defined as a binary tree with two additional constraints:
+
+1. Shape property - a binary heap is a complete binary tree; once again, that is, all
+levels of the tree, except possibly the last one (deepest) are fully filled, and, if the last
+level of the tree is not complete, the nodes of that level are filled from the left to right.
+
+2. Heap property - the key stored in each node is either greater than or equal >= or less
+<= the keys in the node's children.
+
+Heaps where the parent key is >= the child keys are called max-heaps, those where it is <= are
+called min-heaps.
 
