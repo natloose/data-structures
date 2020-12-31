@@ -1,0 +1,55 @@
+What are linked lists?
+
+Linked lists are an ordered collection of objects that differ from lists in the way that they store elements in memory.
+While lists use a contiguous memory block to store references to their data, linked lists store references as part
+of their own elements. contiguous -  sharing a common border; touching.
+
+There are two different kinds of linked lists:
+singly-linked lists - each element in it has a reference to (a “pointer”) to the next element in the list
+doubly-linked lists - each element has a reference to both the next and the previous element.
+                      Having a reference to the previous element can speed up some operations,
+                      like removing (“unlinking”) an element from a list or traversing the list in reverse order.
+
+Does Python have a built-in or “native” linked list data structure?
+Python doesn’t provide a dedicated linked list data type. There’s nothing like Java’s LinkedList built into Python
+or into the Python standard library.
+Python does however include the collections.deque class which provides a doubly-ended queue and is implemented as a
+doubly-linked list internally. Under some specific circumstances you might be able to use it as a “makeshift” linked list.
+
+
+If that’s not an option you’ll need to write your own linked list implementation from scratch.
+
+Each element of a linked list is called a node, and every node has two different fields:
+
+1. Data - contains the value to be stored in the node e.g - 3
+2. Next - contains a reference to the next node on the list.
+
+
+Therefore a Linked list is a collection of Nodes.
+
+The first node is called the head, and is used as the starting point for any iteration through the list.
+The last node must have it’s Next reference pointing to None to determine the end of the list.
+
+
+Performance Comparison: Lists vs Linked Lists
+
+In most programming languages, there are clear differences in the way linked lists and arrays are stored in memory.
+In Python, however, lists are dynamic arrays. That means that the memory usage of both lists and linked lists are very similar.
+
+Since the difference in memory usage between lists and linked lists is so insignificant, it’s better if you focus
+on their performance differences when it comes to time complexity.
+
+In Python, you can insert elements into a list using .insert() or .append(). For removing elements from a list,
+you can use their counterparts: .remove() and .pop(). The main difference between these methods is that you use
+.insert() and .remove() to insert or remove elements at a specific position in a list, but you use .append() and .pop()
+only to insert or remove elements at the end of a list.
+Now, something you need to know about Python lists is that inserting or removing elements that are not at the end of
+the list requires some element shifting in the background, making the operation more complex in terms of time spent.
+With all this in mind, even though inserting elements at the end of a list using .append() or .insert() will have
+constant time, O(1), when you try inserting an element closer to or at the beginning of the list, the average time
+complexity will grow along with the size of the list: O(n). Linked lists, on the other hand, are much more
+straightforward when it comes to insertion and deletion of elements at the beginning or end of a list, where their
+time complexity is always constant: O(1). For this reason, linked lists have a performance advantage over normal lists
+when implementing a queue (FIFO), in which elements are continuously inserted and removed at the beginning of the list.
+But they perform similarly to a list when implementing a stack (LIFO), in which elements are inserted and removed at the end of the list. .
+

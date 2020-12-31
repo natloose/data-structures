@@ -1,0 +1,10 @@
+Queues and stacks differ only in the way elements are retrieved.
+
+For a Queue - you use the First-in/First-out (FIFO) approach.
+              That means the first element inserted into the list is the first one to be retrieved.
+
+For a Stack - you use the Last-in/First-out (LIFO) approach.
+              That means the last element inserted is the first to be retrieved.
+
+Because of the way you insert and retrieve elements from the edges of queues and stacks, linked lists are one of the
+most convenient ways to implement these data structures.
