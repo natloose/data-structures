@@ -1,0 +1,5 @@
+Two-pointer technique is commonly used to solve array problems very efficiently. Whenever an array question deals
+with finding two numbers in an array that satisfy a certain condition, either directly or indirectly, two-pointer
+should be the first strategy that comes to mind. This method rules out large numbers of redundant potential solutions.
+Although it is tricky to construct, by following certain principles, two-pointer is a simple and powerful technique
+to implement.
