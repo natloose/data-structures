@@ -1,0 +1,49 @@
+For software engineers and developers, the algorithm which is most efficient is the one that uses the least amount of
+steps. Written in another way, a computer programmer’s most efficient algorithm is the one which uses the least amount
+of time, takes up the least amount of space, and operates on the lowest level of complexity.
+
+So, the goal of a programmer is not to add steps to an algorithm; rather, the goal of a programmer is to remove steps
+from an algorithm. When there is nothing left to take away, the algorithm is perfect.
+
+The Sliding Window algorithm is one way programmers can move towards simplicity in their code.
+This algorithm is exactly as it sounds; a window is formed over some part of data, and this window can slide over the
+data to capture different portions of it.
+
+To decipher that cryptic definition, take a look at the following example of a problem that can use a sliding window.
+
+Example Question:
+Given an array as input, extract the pair of contiguous integers that have the highest sum of all pairs.
+Return the pair as an array.
+
+Contiguous means sequential, which means the elements must be right next to each other to count as a pair.
+This is a giant clue that a sliding window may work beautifully with this question.
+
+In the context of this question, contiguous also means that one cannot simply sort the array and return the last two
+integers in an array, since we want the pair of contiguous integers which have the highest sum in the array as it is
+already ordered.
+
+In general, any problem where the author is asking for any of the following return values can use a sliding window:
+
+1. Minimum value
+2. Maximum value
+3. Longest value
+4. Shortest value
+5. K-sized value
+
+Furthermore, a question that uses a list or data type that must be iterated over in sequence is a great candidate for a
+sliding window. The previous question also met this criteria, as it had an array input and needed to be iterated over
+sequentially.
+
+Lastly, one of the biggest clues that one can use a sliding window is the word contiguous.
+
+A substring is a contiguous set of characters within a string. For the purposes of this question, the substring
+cannot contain any duplicate characters.
+
+So, this question is asking for the length of the longest substring of the given string that has no duplicate characters.
+This questions checks off nearly all of the criteria mentioned above for using a sliding window. It has:
+
+1, String as input.
+2. Contiguous elements requirement.
+3. The entire string must be iterated over.
+4. The longest substring must be found.
+
