@@ -1,0 +1,59 @@
+Union Find data structure aka disjoint-set data structure
+
+What is a union find data structure?
+
+A union find data structure is a data structure that stores and can keep track of elements into a number  of disjoint
+(non-overlapping) sets.
+This why it's also known as the disjoint set data structure. There are mainly two useful operations on such a data
+structure that can be performed. A *find* operation determines which subset a particular element is in. This can be
+used for determining if two elements are in the same subset. A *union* joins two subsets into a single subset.
+
+
+While there are several ways of implementing union find data structures, in practice they are often identified
+with a particular implementation called a disjoint-set forest. This is a specialized type of forest which performs
+unions and finds in near constant amortized(average time taken per operation, if you do many operations) time.
+
+The two primary operations (but supports three):
+
+1. Find(x)- Determine which subset a particular element(x) is in. This can be used for determining if two elements
+          are in the same subset.
+          Specifically it follows the chain of parent pointers from a specified query node x until it reaches a root
+          element. This root element represents the set to which x belongs and may be x itself. Find returns the root
+          element it reaches.
+2. Union(x,y) - Finds the subset of x and y. If the roots are the same, there is nothing more to do. Otherwise,
+             the two trees must be merged. This is done by either setting the parent pointer of x to y,
+             or setting the parent pointer of y to x.
+3. MakeSet(x) - The MakeSet operation adds a new element. This element is placed into a new set containing only the new
+element, and the new set is added to the data structure. If the data structure is instead viewed as a partition of
+a set, then the MakeSet operation enlarges the set by adding the new element, and it extends the existing partition
+by putting the new element into a new subset containing only the new element.
+
+Union-find abstractions
+
+Simple model captures the essential nature of connectivity:
+
+OBJECTS:
+        0 1 2 3 4 5 6 7 8 9
+DISJOINT SETS OF OBJECTS:
+        0 1 {2 3 9} 5 6 7 {4 8}
+Find(x) QUERY: are objects 2 and 9 in the same set?
+        0 1 {2 3 9} 5 6 7 {4 8}
+Union(x, y) command: merge sets containing 3 and 8
+        0 1 {2 3 4 8 9} 5 6
+
+
+When are where is Union Find used?
+
+1. Kruskal's minumum spanning tree algorithm
+2. Grid percolation
+3. Network Connectivity
+4. Least common ancestor in trees
+5. Image processing
+
+
+
+
+
+
+
+
