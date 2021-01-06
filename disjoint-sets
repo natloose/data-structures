@@ -2,9 +2,9 @@ Union Find data structure aka disjoint-set data structure
 
 What is a union find data structure?
 
-A union find data structure is a data structure that stores and can keep track of elements into a number  of disjoint
+A union find data structure is a data structure that stores and can keep track of elements into a number of disjoint
 (non-overlapping) sets.
-This why it's also known as the disjoint set data structure. There are mainly two useful operations on such a data
+This is why it's also known as the disjoint set data structure. There are mainly two useful operations on such a data
 structure that can be performed. A *find* operation determines which subset a particular element is in. This can be
 used for determining if two elements are in the same subset. A *union* joins two subsets into a single subset.
 
