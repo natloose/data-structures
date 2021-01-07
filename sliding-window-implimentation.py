@@ -2,7 +2,7 @@ arr = [1, 2, 6, 10, 13, 19]
 k = 3
 
 
-def length_of_longest_substring(arr, k):
+def length_of_longest_subarray(arr, k):
     # Define max sum variable which we'll initialize to -infinity
     max_sum = float('-inf')
     # Define start pointer which will be the beginning of our sliding window

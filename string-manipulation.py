@@ -42,6 +42,36 @@ def reverse_int(x):
 reverse_int(-109101)
 
 
+# Q3. Add Strings
+
+# Solution 1
+# Given two non-negative integers num1 and num2 represented as string, return the sum of num1 and num2.
+# You must not use any built-in BigInteger library or convert the inputs to integer directly.
+
+# Notes:
+# Both num1 and num2 contains only digits 0-9.
+# Both num1 and num2 does not contain any leading zero
+
+num1 = '300'
+num2 = '1900'
+
+
+def add_strings(num1, num2):
+    # Eval() function parses the expression argument and evaluates it as a python expression. In simple, the eval
+    # function evaluates the “String” like a python expression and returns the result as an integer.
+    print(str(eval(num1) + eval(num2)))
+
+
+add_strings(num1, num2)
+
+# Solution 2
+
+
+
+
+
+
+
 
 
 
